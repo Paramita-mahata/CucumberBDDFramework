@@ -20,14 +20,16 @@ Then User gets a message "Pleasse fill out fields"
 Examples:
 |email|password|
 |         |         | 
+|         |          |
 
-Scenario Outline:  Validating sign in with invalid email and valid password
+Scenario Outline:  Validatingsign in with invalid email and valid password
 Given User is on Sign in page
 When User clicks on login button with invalid email and valid password
 Then User gets a message "invalid password.please try again"
 Examples:
 |invalidemail| validpassword|
 |  dfsxxrtygc       |shwetha| 
+|xdsfjhjnvn|shwetha|
 
 Scenario Outline:  validating sign in with valid email and invalid password
 Given User is on Sign in page
@@ -35,7 +37,8 @@ When User clicks on login button with valid email and invalid password
 Then User gets a message "please fill the password"
 Examples:
 |validemail| inavalidpassword|
-|  dfsxxrtygc       |shwetha| 
+|  sgwet@gmail.com      |dserdrsfyws| 
+|dsrtsws@gmail.com      |    xgdfghb|
 
 Scenario Outline:  Validating sign in with invalid credentials 
 Given User is on Sign in page
@@ -43,7 +46,8 @@ When User clicks on login button with invalid email and invalid password
 Then User gets a message "Invalid log in credentials"
 Examples:
 |invalidemail| inavalidpassword|
-|  dfsxxrtygc       |shwetha| 
+|  dfsxxrtygc    |shwetha| 
+|xdwrdtwyjgjhb|  drwdfhgsv|
 
 Scenario Outline:  validating sign in with valid  credentials 
 Given User is on Sign in page
@@ -52,6 +56,7 @@ Then User gets a message "logged in successfully"
 Examples:
 |validemail| validpassword|
 |  dfsxxrtygc@gmail.com|shwetha| 
+|esdwswhshw@gmail.com| ever|
 
 Scenario Outline:  Validating sign in with Facebook button 
 Given User is on Sign in page
@@ -60,6 +65,7 @@ Then User is redirected to Facebook login page
 Examples:
 |username| password|
 |  Shwetha|shwetha|
+|cucumber|cucumber|
 
 Scenario Outline:  Validating sign in with Google  button 
 Given User is on Sign in page
@@ -68,6 +74,7 @@ Then User is redirected to Google login page
 Examples:
 |username| password|
 |  ShwethaMohan|shwetha|
+|cucumber|cucumber|
 
 Scenario:  Validating sign in with SignUp  button 
 Given User is on Sign in page
