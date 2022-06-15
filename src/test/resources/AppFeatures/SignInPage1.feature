@@ -58,7 +58,6 @@ Then User will land on Register page
 Scenario : validating the Sign in with all fields valid entry 
 Given  User is on sign in  page 
 When User clicks sign in with all fields entered
-|username|password|
 | shwetha        |cucumber | 
 Then User logged in successfully
-| shwetha        |cucumber | 
+
