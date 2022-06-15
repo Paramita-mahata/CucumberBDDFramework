@@ -19,67 +19,67 @@ Given  User is on Dietician  website
 When User lands on Register page 
 Then User should see a  Register form with heading "Sign Up form"
 
-Scenario Outline: validating the Sign up processs with empty fields
+Scenario : validating the Sign up processs with empty fields
+Given  User is on Register page 
 When User clicks on sign up button with all fields empty
-Then User should see a message "mandatory fields cannot be empty"
-Examples:
 |FirstName|LastName|MobileNumber|AnyField|Email|Password|
 |         |         |           |        |     |        |
+Then User should see a message "mandatory fields cannot be empty"
 
 
-Scenario Outline: validating the Sign up processs with invalid First Name
+
+Scenario : validating the Sign up processs with invalid First Name
 Given  User is on Register page 
 When User clicks on sign up button with inavalid first name
-Then User should see a message "inavlid data entered for First name"
-Examples:
 |FirstName|
 |shwe$-ha|
+Then User should see a message "inavlid data entered for First name"
 
-Scenario Outline: validating the Sign up processs with invalid last name 
+
+Scenario : validating the Sign up processs with invalid last name 
 Given  User is on Register page 
 When User clicks on sign up button with inavalid last name
-Then User should see a message "inavlid data entered for Last name"
-Examples:
 |LastName|
 |pu2454|
+Then User should see a message "inavlid data entered for Last name"
 
-Scenario Outline: validating the Sign up processs with invalid Moblie Number
+
+Scenario : validating the Sign up processs with invalid Moblie Number
 Given  User is on Register page 
 When User clicks on sign up button with incorrect moblie number
-Then User should see a message "inavlid data entered for Mobile Number"
-Examples:
 |MobileNumber|
 |1243545765sddf|
-|1234343546789008790|
+Then User should see a message "inavlid data entered for Mobile Number"
 
-Scenario Outline: validating the Sign up processs with invalid Any other field
+
+Scenario : validating the Sign up processs with invalid Any other field
 Given  User is on Register page 
 When User clicks on sign up button with invalid any other field
-Then User should see a message "inavlid data entered for Any other field"
-Examples:
 |AnyField|
 |$^77879|
+Then User should see a message "inavlid data entered for Any other field"
 
-Scenario Outline: validating the Sign up processs with invalid Email
+
+Scenario : validating the Sign up processs with invalid Email
 Given  User is on Register page 
 When User clicks on sign up button with invalid Email
-Then User should see a message "inavlid data entered for Email"
-Examples:
 |Email|
 |shwethamailcom|
+Then User should see a message "inavlid data entered for Email"
 
-Scenario Outline: validating the Sign up processs with invalid Password
+
+Scenario : validating the Sign up processs with invalid Password
 Given  User is on Register page 
 When User clicks on sign up button with invalid Password
-Then User should see a message "inavlid data entered for Password"
-Examples:
 |Password|
 |vfdytyjvngvb|
+Then User should see a message "inavlid data entered for Password"
 
-Scenario Outline: validating the Sign up processs with valid credentials
+
+Scenario : validating the Sign up processs with valid credentials
 Given  User is on Register page 
 When User clicks on sign up button with valid credentials
-Then User is re-directed to sign in page
-Examples:
 |FirstName|LastName|MobileNumber|AnyField|Email|Password|
-|Shwetha| pul| 1345566768|cfdgfh |Sdfdgf@gmail.com|drghgjjj| 
+|Shwetha| pul| 1345566768|cfdgfh |Sdfdgf@gmail.com|drghgjjj|
+Then User is re-directed to sign in page
+ 
