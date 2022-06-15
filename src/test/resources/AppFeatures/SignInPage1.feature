@@ -24,29 +24,26 @@ Given  User is on Dietician  website
 When user is on sign in page
 Then User should see a button with text "sign in"
 
-Scenario Outline: validating the Sign in  with empty fields
+Scenario: validating the Sign in  with empty fields
 Given  User is on Sign in  page 
 When User clicks on sign in button with all fields empty
+|         |         | 
 Then User should get message "please fill out the fields"
-Examples:
-|username|password|
-|         |         |  
 
-Scenario Outline: validating the Sign in  with invalid Password
+
+Scenario : validating the Sign in  with invalid Password
 Given  User is on sign in  page 
 When User clicks on sign in button with invalid Password
+| xdutpo32l;,mm| 
 Then User should get a message "inavlid entry for password field"
-Examples:
-|password|
-| xdutpo32l;,mm|         
+        
 
-Scenario Outline: validating the Sign in  with both invalid username and Password
+Scenario : validating the Sign in  with both invalid username and Password
 Given  User is on sign in  page 
 When User clicks on sign in button with invalid  username and password
+ |cxfre565271871ujdf|  cdsryuj3452678910p	lamnz|
 Then User should get  a message "inavlid login credentials"
-Examples:
-|username|password|
-| cxfre565271871ujdf|  cdsryuj3452678910p	lamnz|
+
 
 Scenario: validating the Sign in with forgot password link
 Given  User is on sign in  page 
@@ -58,10 +55,10 @@ Given  User is on sign in  page
 When User clicks on not member yet button
 Then User will land on Register page
 
-Scenario Outline: validating the Sign in with all fields valid entry 
+Scenario : validating the Sign in with all fields valid entry 
 Given  User is on sign in  page 
 When User clicks sign in with all fields entered
-Then User logged in successfully
-Examples:
 |username|password|
+| shwetha        |cucumber | 
+Then User logged in successfully
 | shwetha        |cucumber | 
