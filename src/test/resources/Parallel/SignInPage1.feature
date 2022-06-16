@@ -25,35 +25,35 @@ When user is on sign in page
 Then User should see a button with text "sign in"
 
 Scenario: validating the Sign in  with empty fields
-Given  User is on Sign in  page 
+Given User has already on sign in  page 
 When User clicks on sign in button with all fields empty
 Then User should get message "please fill out the fields"
  
 
 Scenario: validating the Sign in  with invalid Password
-Given  User is on sign in  page 
+Given  User has already on sign in  page
 When User clicks on sign in button with invalid Password
-Then User should get a message "inavlid entry for password field"
+Then User should get message "inavlid entry for password field"
         
 
 Scenario: validating the Sign in  with both invalid username and Password
-Given  User is on sign in  page 
+Given User has already on sign in  page
 When User clicks on sign in button with invalid  username and password
-Then User should get  a message "inavlid login credentials"
+Then User should get message "inavlid login credentials"
 
 
 Scenario: validating the Sign in with forgot password link
-Given  User is on sign in  page 
+Given  User has already on sign in  page
 When User clicks on forgot password button
 Then User should be directed to reset password link
 
 Scenario: validating the Sign in with Not member yet button 
-Given  User is on sign in  page 
+Given User has already on sign in  page 
 When User clicks on not member yet button
 Then User will land on Register page
 
 Scenario: validating the Sign in with all fields valid entry 
-Given  User is on sign in  page 
+Given User has already on sign in  page 
 When User clicks sign in with all fields entered
 Then User logged in successfully
  

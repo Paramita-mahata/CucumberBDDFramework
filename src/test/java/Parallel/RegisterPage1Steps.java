@@ -59,17 +59,21 @@ List<String> data =	credentials.asList(String.class);
  System.out.println(data.get(0));
 }
 
+@Then("User clicks on sign up button")
+public void user_clicks_on_sign_up_button() {
+   rp.signupbtn();
+}
 
 @When("User clicks on sign up button with all fields empty")
 public void user_clicks_on_sign_up_button_with_all_fields_empty() {
   rp.emptyFields();
 }
-
 @Then("User should see a message {string}")
 public void user_should_see_a_message(String errorMsg) {
  String msg =  rp.errorText(); 
  Assert.assertTrue(msg.contains(errorMsg));
 }
+
 
 //data table approach
 @When("User enters inavalid first name")
@@ -78,11 +82,16 @@ List<String> data =	dataTable.asList();
 System.out.println(data.get(0));
 
 }
-@Then("User clicks on sign up button")
-public void user_clicks_on_sign_up_button() {
-   rp.signupbtn();
-}
 
+
+@When("User clicks on sign up button with incorrect moblie number")
+public void user_clicks_on_sign_up_button_with_incorrect_moblie_number() {
+	rp.signupbtn();   
+}
+@When("User clicks on sign up button with invalid any other field")
+public void user_clicks_on_sign_up_button_with_invalid_any_other_field() {
+	rp.signupbtn(); 
+}
 
 @When("User clicks on sign up button with inavalid first name")
 public void user_clicks_on_sign_up_button_with_inavalid_first_name() {
@@ -105,6 +114,7 @@ public void user_clicks_on_sign_up_button_with_invalid_email() {
 public void user_clicks_on_sign_up_button_with_invalid_password() {
   rp.signUpTest();  
 }
+
 
 @When("User clicks on sign up button with valid credentials")
 public void user_clicks_on_sign_up_button_with_valid_credentials() {

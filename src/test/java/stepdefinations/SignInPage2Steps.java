@@ -51,11 +51,7 @@ public class SignInPage2Steps {
 		sp.signInTest2();   
 	}
 
-	@Then("User gets a message {string}")
-	public void user_gets_a_message(String string) {
-		String text = sp.errorText();
-		 System.out.println("Error message :"+text);  
-	}
+	
 
 	@When("User clicks on login button with valid email and invalid password")
 	public void user_clicks_on_login_button_with_valid_email_and_invalid_password() {
@@ -70,6 +66,11 @@ public class SignInPage2Steps {
 	@When("User clicks on login button with valid email and valid password")
 	public void user_clicks_on_login_button_with_valid_email_and_valid_password() {
 		 sp.signin();   
+	}
+	@Then("User gets a message {string}")
+	public void user_gets_a_message(String string) {
+		String text = sp.errorText();
+		 System.out.println("Error message :"+text);  
 	}
 
 

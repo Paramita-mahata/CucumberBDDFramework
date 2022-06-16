@@ -26,32 +26,56 @@ public class SignInPage1Steps {
 
 	
 
-//	@Given("User is on Sign in  page")
+//	@Given("User is on sign in  page")
 //	public void user_is_on_sign_in_page() {
 //		sp= new SignInPage (DriverFactory.getDriver());
 //		   title = sp.validateSignInpageTitle();
 //		   Assert.assertEquals(title ,"Sign in");
-	//}
+//	}
+	
+	
+	@When("user lands on sign in page")
+	public void user_lands_on_sign_in_page() {
+	    sp= new SignInPage (DriverFactory.getDriver());
+		   title = sp.validateSignInpageTitle();
+		   Assert.assertEquals(title ,"Sign in");
+	}
+	
 	@When("user is on sign in page")
 	public void user_is_on_sign_in_page() {
 		sp= new SignInPage (DriverFactory.getDriver());
 		   title = sp.validateSignInpageTitle();
-		   Assert.assertEquals(title ,"Sign in");  
+		   Assert.assertEquals(title ,"Sign in");
+	   
 	}
 	
-	@When("user clicks on sign in")
-	public void user_clicks_on_sign_in() {
-	 sp.signin();   
-	}
-
-	
-
 	@Then("User should see all mandatory fields")
 	public void user_should_see_all_mandatory_fields() {
 	boolean fd =	sp.validatefields();
 	Assert.assertTrue(fd);
 	   
 	}
+	
+
+
+@Given("User has already on sign in  page")
+public void user_has_already_on_sign_in_page() {
+   System.out.println( title);
+}
+@When("user clicks on sign in")
+public void user_clicks_on_sign_in() {
+ sp.signin();   
+}
+
+
+
+@Then("User should get a message {string}")
+public void user_should_get_a_message(String string) {
+ String text = sp.errorText(); 
+ System.out.println(text);
+ 
+}
+
 
 
 	@When("User clicks on sign in button with all fields empty")
@@ -59,12 +83,7 @@ public class SignInPage1Steps {
 	 sp.emptyFields();
 	}
 
-	@Then("User should get message {string}")
-	public void user_should_get_message(String errortext) {
-	    String text = sp.errorText();
-	   Assert.assertTrue(text.contains(errortext));
-	}
-
+	
 	
 
 	@When("User clicks on sign in button with inavalid first name")
@@ -82,6 +101,11 @@ public class SignInPage1Steps {
 	@When("User clicks on sign in button with invalid  username and password")
 	public void user_clicks_on_sign_in_button_with_invalid_username_and_password() {
 	   sp.signInTest();
+	}
+	@Then("User should get message {string}")
+	public void user_should_get_message(String errortext) {
+	    String text = sp.errorText();
+	   Assert.assertTrue(text.contains(errortext));
 	}
 
 	

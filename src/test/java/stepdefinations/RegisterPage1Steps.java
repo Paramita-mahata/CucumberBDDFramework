@@ -52,12 +52,6 @@ public void user_is_on_register_page() {
    System.out.println("Current page title is :"+"Register");
 }
 
-@When("user enters following incorrect data")
-public void user_enters_following_incorrect_data(io.cucumber.datatable.DataTable credentials) {
-List<String> data =	credentials.asList(String.class);
- data.get(0);
- System.out.println(data.get(0));
-}
 
 
 @When("User clicks on sign up button with all fields empty")
@@ -82,7 +76,10 @@ System.out.println(data.get(0));
 public void user_clicks_on_sign_up_button() {
    rp.signupbtn();
 }
-
+@When("User clicks on sign up button with invalid any other field")
+public void user_clicks_on_sign_up_button_with_invalid_any_other_field() {
+   rp.signupbtn();
+}
 
 @When("User clicks on sign up button with inavalid first name")
 public void user_clicks_on_sign_up_button_with_inavalid_first_name() {
@@ -94,7 +91,10 @@ public void user_clicks_on_sign_up_button_with_inavalid_first_name() {
 public void user_clicks_on_sign_up_button_with_inavalid_last_name() {
   rp.signUpTest(); 
 }
-
+@When("User clicks on sign up button with incorrect moblie number")
+public void user_clicks_on_sign_up_button_with_incorrect_moblie_number() {
+	rp.signUpTest();  
+}
 
 @When("User clicks on sign up button with invalid Email")
 public void user_clicks_on_sign_up_button_with_invalid_email() {

@@ -23,27 +23,10 @@ public class SignInPage1Steps {
 	 System.out.println("Current page title is :"+"Sign In");  
 	}
 
-
-	
-
-//	@Given("User is on Sign in  page")
-//	public void user_is_on_sign_in_page() {
-//		sp= new SignInPage (DriverFactory.getDriver());
-//		   title = sp.validateSignInpageTitle();
-//		   Assert.assertEquals(title ,"Sign in");
-	//}
-	@When("user is on sign in page")
-	public void user_is_on_sign_in_page() {
-		sp= new SignInPage (DriverFactory.getDriver());
-		   title = sp.validateSignInpageTitle();
-		   Assert.assertEquals(title ,"Sign in");  
+	@Given("User is on log in  page")
+	public void user_is_on_log_in_page() {
+		System.out.println("Current page title is :"+"log In"); 
 	}
-	
-	@When("user clicks on sign in")
-	public void user_clicks_on_sign_in() {
-	 sp.signin();   
-	}
-
 	
 
 	@Then("User should see all mandatory fields")
@@ -52,26 +35,64 @@ public class SignInPage1Steps {
 	Assert.assertTrue(fd);
 	   
 	}
+	
+	
+	
+	@Given("User  has already on sign in  page")
+	public void user_has_alreday_on_sign_in_page() {
+		sp= new SignInPage (DriverFactory.getDriver());
+		   title = sp.validateSignInpageTitle();
+		   Assert.assertEquals(title ,"Sign in");
+	}
+	
+	@When("user lands on sign in page")
+	public void user_lands_on_sign_in_page() {
+		   System.out.println("page title is sign in");  
+	}
+	
+	@Then("User should see the title of the page  {string}")
+	public void user_should_see_the_title_of_the_page(String string) {
+		title =	sp.validateSignInpageTitle();
+		System.out.println(title);
+	}
+	
+	
 
+
+	@Given("User has already on sign in  page")
+	public void user_has_already_on_sign_in_page() {
+		System.out.println("page title is sign in"); 
+	}
+	@When("user clicks on sign in")
+	public void user_clicks_on_sign_in() {
+	 sp.signin(); 
+	}
 
 	@When("User clicks on sign in button with all fields empty")
 	public void user_clicks_on_sign_in_button_with_all_fields_empty() {
 	 sp.emptyFields();
 	}
 
-	@Then("User should get message {string}")
-	public void user_should_get_message(String errortext) {
-	    String text = sp.errorText();
-	   Assert.assertTrue(text.contains(errortext));
+
+
+	@Then("User should get a message {string}")
+	public void user_should_get_a_message(String string) {
+		System.out.println("invalid login credentials");
 	}
 
 	
+
+
+
+	@When("user is on sign in page")
+	public void user_is_on_sign_in_page() {
+	    System.out.println("page title is sign in");
+	}
 
 	@When("User clicks on sign in button with inavalid first name")
 	public void user_clicks_on_sign_in_button_with_inavalid_first_name() {
 	  sp.signInTest();  
 	}
-
 	
 
 	@When("User clicks on sign in button with invalid Password")
@@ -83,7 +104,11 @@ public class SignInPage1Steps {
 	public void user_clicks_on_sign_in_button_with_invalid_username_and_password() {
 	   sp.signInTest();
 	}
-
+	@Then("User should get message {string}")
+	public void user_should_get_message(String errortext) {
+	    String text = sp.errorText();
+	   Assert.assertTrue(text.contains(errortext));
+	}
 	
 
 	@When("User clicks on forgot password button")
