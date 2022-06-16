@@ -22,7 +22,7 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 	
-	@Before(order=0)//to get browser properties from configreader
+	 @Before(order=0)//to get browser properties from configreader
 	public void getProperty() {
 		configReader = new ConfigReader ();
 		 prop =configReader.initializeProp();
