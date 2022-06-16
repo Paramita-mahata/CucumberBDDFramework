@@ -1,0 +1,5 @@
+com/pages/RegisterPage.class
+com/qa/util/ConfigReader.class
+com/qa/factory/DriverFactory.class
+com/pages/SignInPage.class
+com/pages/HomePage.class
