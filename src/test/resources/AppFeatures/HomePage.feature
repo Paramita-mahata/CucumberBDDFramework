@@ -63,5 +63,3 @@ Scenario: Validating the visibility of Signin option
 #Given User is on the browser
 #When User open the Dietician Website
 Then User should see a Signin option next to the search button
-
-
