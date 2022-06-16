@@ -13,11 +13,6 @@ public class MyPatient {
 	//public By enterPhone = By.xpath("") ;
 	//public By searchResultTag = By.xpath("") ;
 	
-//	public MyPatient (WebDriver driver) {
-//		this.driver=driver;
-//		}
-
-	
 
 	@SuppressWarnings("static-access")
 	public MyPatient(WebDriver driver) {

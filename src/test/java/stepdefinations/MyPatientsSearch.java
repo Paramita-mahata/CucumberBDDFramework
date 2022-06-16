@@ -144,8 +144,8 @@ public class MyPatientsSearch {
 	public void records_with_that_phone_number_are_displayed() {
 	    // Write code here that turns the phrase above into concrete actions
 		ObjMyPatient.searchResult();
-		msg="expectedAlertMessage";
-		Assert.assertTrue(msg.contains("expectedAlertMessage"));
+		msg="searchResult string";
+		Assert.assertTrue(msg.contains("searchResult string"));
 	}
 	
 

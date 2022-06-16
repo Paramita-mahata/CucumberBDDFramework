@@ -64,7 +64,7 @@ public class searchResults {
 	
 	public void capturePDFinfo() {
 		//driver.findElement(clickPDF).click();
-		System.out.println("clickPDF button is successful");
+		System.out.println("PDF file open is successful");
 		}
 	
 	
