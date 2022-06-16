@@ -13,16 +13,16 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		glue = {"Parallel" },
 		plugin = {"pretty",  
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"timeline:threadreport/"},
+		"timeline:threadreport/"},
 		monochrome= true,//display the console output in proper readable format
 		//dryRun = true//to check the mapping is proper between feature file & step def file
 		dryRun=false,
 		publish = true
-	
+
 		)
 
 public class ParallelRun extends AbstractTestNGCucumberTests {
-	
+
 	@Override
 	@DataProvider(parallel = true)
 	public Object[][] scenarios(){

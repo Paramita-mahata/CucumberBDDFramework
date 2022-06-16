@@ -1,9 +1,11 @@
 package com.pages;
 
+import org.openqa.selenium.WebDriver;
+
 public class CreatePlanone {
    
 	
-static WebDriver driver; 
+	private WebDriver driver; 
 	
 	//public By clickBrowse = By.xpath("") ;
 	//public By browseTag = By.xpath("") ;

@@ -1,9 +1,11 @@
 package com.pages;
 
+import org.openqa.selenium.WebDriver;
+
 public class CreatePlantwo {
   
 	  
-static WebDriver driver;
+private WebDriver driver;
 	
 	//public By clickBrowse2 = By.xpath("") ;
 	//public By browseTag2 = By.xpath("") ;
