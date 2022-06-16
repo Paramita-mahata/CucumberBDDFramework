@@ -92,5 +92,14 @@ public class RegisterPage {
 			loginHere.click();
 			}
 		
-}
+		public void signupbtn() {
+			signUpBtn.click();
+			}
+		public WebElement txtUserName () {
+			return txtUserName;
+			}
+		public WebElement  txtPassword () {
+			return txtPassword ;
+			}
 		
+}

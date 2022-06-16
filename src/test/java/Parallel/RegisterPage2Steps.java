@@ -1,4 +1,4 @@
-package stepdefinations;
+package Parallel;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
