@@ -1,4 +1,3 @@
-
 @tag
 Feature: Testing MyPatients page
   As a user, I must able to open and work on My Patients Page
