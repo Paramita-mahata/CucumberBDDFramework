@@ -12,8 +12,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		features = {"src/test/resources/Parallel"},
 		glue = {"Parallel" },
 		plugin = {"pretty",  
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-		"timeline:threadreport/"},
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		
 		monochrome= true,//display the console output in proper readable format
 		//dryRun = true//to check the mapping is proper between feature file & step def file
 		dryRun=false,
