@@ -27,31 +27,18 @@ Then User should see a button with text "sign in"
 Scenario: validating the Sign in  with empty fields
 Given  User is on Sign in  page 
 When User clicks on sign in button with all fields empty
-|         |         | 
 Then User should get message "please fill out the fields"
-<<<<<<< Updated upstream
-
-
-Scenario : validating the Sign in  with invalid Password
-=======
  
 
 Scenario: validating the Sign in  with invalid Password
->>>>>>> Stashed changes
 Given  User is on sign in  page 
 When User clicks on sign in button with invalid Password
-| xdutpo32l;,mm| 
 Then User should get a message "inavlid entry for password field"
         
 
-<<<<<<< Updated upstream
-Scenario : validating the Sign in  with both invalid username and Password
-=======
 Scenario: validating the Sign in  with both invalid username and Password
->>>>>>> Stashed changes
 Given  User is on sign in  page 
 When User clicks on sign in button with invalid  username and password
- |cxfre565271871ujdf|  cdsryuj3452678910p	lamnz|
 Then User should get  a message "inavlid login credentials"
 
 
@@ -65,17 +52,8 @@ Given  User is on sign in  page
 When User clicks on not member yet button
 Then User will land on Register page
 
-<<<<<<< Updated upstream
-Scenario : validating the Sign in with all fields valid entry 
-=======
 Scenario: validating the Sign in with all fields valid entry 
->>>>>>> Stashed changes
 Given  User is on sign in  page 
 When User clicks sign in with all fields entered
-| shwetha        |cucumber | 
 Then User logged in successfully
-<<<<<<< Updated upstream
-
-=======
  
->>>>>>> Stashed changes

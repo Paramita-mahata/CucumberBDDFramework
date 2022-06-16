@@ -17,94 +17,43 @@ Scenario:  Validating Sign in with email and password empty
 Given User is on Sign in page
 When User clicks on login button
 Then User gets a message "Pleasse fill out fields"
-<<<<<<< Updated upstream
-Examples:
-|email|password|
-|         |         | 
-|         |          |
-
-Scenario Outline:  Validatingsign in with invalid email and valid password
-Given User is on Sign in page
-When User clicks on login button with invalid email and valid password
-Then User gets a message "invalid password.please try again"
-Examples:
-|invalidemail| validpassword|
-|  dfsxxrtygc       |shwetha| 
-|xdsfjhjnvn|shwetha|
-=======
  
 
 Scenario:  Validating sign in with invalid email and valid password
 Given User is on Sign in page
 When User clicks on login button with invalid email and valid password
 Then User gets a message "invalid password.please try again"
->>>>>>> Stashed changes
 
 
 Scenario:  validating sign in with valid email and invalid password
 Given User is on Sign in page
 When User clicks on login button with valid email and invalid password
 Then User gets a message "please fill the password"
-<<<<<<< Updated upstream
-Examples:
-|validemail| inavalidpassword|
-|  sgwet@gmail.com      |dserdrsfyws| 
-|dsrtsws@gmail.com      |    xgdfghb|
-=======
->>>>>>> Stashed changes
 
 
 Scenario:  Validating sign in with invalid credentials 
 Given User is on Sign in page
 When User clicks on login button with invalid email and invalid password
 Then User gets a message "Invalid log in credentials"
-<<<<<<< Updated upstream
-Examples:
-|invalidemail| inavalidpassword|
-|  dfsxxrtygc    |shwetha| 
-|xdwrdtwyjgjhb|  drwdfhgsv|
-=======
->>>>>>> Stashed changes
 
 
 Scenario:  validating sign in with valid  credentials 
 Given User is on Sign in page
 When User clicks on login button with valid email and valid password
 Then User gets a message "logged in successfully"
-<<<<<<< Updated upstream
-Examples:
-|validemail| validpassword|
-|  dfsxxrtygc@gmail.com|shwetha| 
-|esdwswhshw@gmail.com| ever|
-=======
  
->>>>>>> Stashed changes
 
 Scenario:  Validating sign in with Facebook button 
 Given User is on Sign in page
 When User clicks on facebook button
 Then User is redirected to Facebook login page
-<<<<<<< Updated upstream
-Examples:
-|username| password|
-|  Shwetha|shwetha|
-|cucumber|cucumber|
-=======
->>>>>>> Stashed changes
 
 
 Scenario:  Validating sign in with Google  button 
 Given User is on Sign in page
 When User clicks on Google  button
 Then User is redirected to Google login page
-<<<<<<< Updated upstream
-Examples:
-|username| password|
-|  ShwethaMohan|shwetha|
-|cucumber|cucumber|
-=======
 
->>>>>>> Stashed changes
 
 Scenario:  Validating sign in with SignUp  button 
 Given User is on Sign in page
